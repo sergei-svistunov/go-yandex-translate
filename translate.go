@@ -80,6 +80,7 @@ func (t *Translate) Translate(texts []string, lang string, format string) ([]str
 		params.Add("text", s)
 	}
 	params.Set("lang", lang)
+	params.Set("format", format)
 
 	var jsonResp struct {
 		Code    uint16   `json:"code"`
